@@ -1,0 +1,127 @@
+.player {
+	flex:1 1 45%;
+	padding: clamp(1rem, 0.636rem + 1.82vw, 2rem);
+	margin: 10px;
+	border-radius: 16px;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+	position: relative;
+	transition:
+	transform 0.3s ease,
+	background-color 0.3s ease;
+	background: #e0e5ec;
+  box-shadow:
+    8px 8px 16px #babecc,
+    -8px -8px 16px #ffffff;
+
+}
+
+.active {
+	background: #d0d8e4;
+  box-shadow:
+    inset 6px 6px 10px #babecc,
+    inset -6px -6px 10px #ffffff;
+  border: none;
+}
+
+.name {
+	font-size: clamp(1.2rem, 0.982rem + 1.09vw, 1.8rem);
+	font-weight: 700;
+	margin-bottom: 10px;
+	color: #2d3436;
+	font-family: var(--font-ubuntu);
+}
+
+.guessedBlock {
+	margin-bottom: clamp(0.75rem, 0.568rem + 0.91vw, 1.25rem);
+	font-size: clamp(1rem, 0.927rem + 0.36vw, 1.2rem);
+	color: #636e72;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.guessedBlock span {
+	padding: 4px 8px;
+	border-radius: 8px;
+	background-color: #e0e5ec;
+  box-shadow:
+    2px 2px 6px #babecc,
+    -2px -2px 6px #ffffff;
+  color: #2d3436;
+  font-weight: 700;
+}
+
+.lose {
+	color: #e74c3c;
+	font-weight: 700;
+	font-size: clamp(1.1rem, 0.991rem + 0.55vw, 1.4rem);
+	margin-top: 12px;
+}
+
+.inputBlock {
+	display: flex;
+	gap: 12px;
+	margin-top: 10px;
+}
+
+.input {
+	flex: 1;
+	padding: 10px;
+	border-radius: 8px;
+	font-size: clamp(1rem, 0.964rem + 0.18vw, 1.1rem);
+	background-color: #e0e5ec;
+  border: none;
+  box-shadow:
+    inset 4px 4px 8px #babecc,
+    inset -4px -4px 8px #ffffff;
+}
+
+.button {
+	background-color: #2ecc71;
+  box-shadow:
+    2px 2px 4px #babecc,
+    -2px -2px 4px #ffffff;
+	color: white;
+	border: none;
+	padding: 10px 16px;
+	border-radius: 8px;
+	font-weight: 600;
+	font-size: clamp(0.9rem, 0.827rem + 0.36vw, 1.1rem);
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.button:disabled {
+	background-color: #bdc3c7;
+	cursor: not-allowed;
+}
+
+.button:hover:not(:disabled) {
+  background-color: #27ae60;
+  box-shadow:
+    inset 2px 2px 4px #babecc,
+    inset -2px -2px 4px #ffffff;
+}
+
+.message {
+	position: absolute;
+	bottom: 4%;
+	left: 10%;
+	color: #e56767;
+	font-weight: 600;
+	font-size: clamp(0.7rem, 0.555rem + 0.73vw, 1.1rem);
+	animation: fadeIn 0.3s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateX(-50%) translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(-50%) translateY(0);
+	}
+}

@@ -1,0 +1,109 @@
+.wrapper {
+	background: rgba(255, 255, 255, 0.7);
+	padding: 14px 18px;
+	border-radius: 16px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	margin-bottom: 14px;
+	font-family: var(--font-shantell);
+	font-size: clamp(0.875rem, 0.793rem + 0.41vw, 1.1rem);
+	line-height: 1.4;
+	position: relative;
+	backdrop-filter: blur(10px);
+	animation: fadeIn 0.3s ease-in-out;
+}
+
+.message {
+	margin: 0;
+	color: #2c2c2c;
+	word-wrap: break-word;
+}
+
+.actions {
+	display: flex;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+.button {
+	position: relative;
+	background: transparent;
+	border: none;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	cursor: pointer;
+	color: #444;
+	transition: all 0.3s ease;
+	font-size: clamp(0.75rem, 0.677rem + 0.36vw, 0.95rem);
+	overflow: hidden;
+
+	svg {
+		width: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
+		height: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
+		transition: transform 0.3s ease;
+		will-change: transform;
+	}
+
+	&:active {
+		animation: pop 0.3s ease;
+	}
+}
+
+.like {
+	@media (any-hover: hover) {
+		&:hover {
+			color: #2196f3;
+
+			svg {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	&::after {
+		background: radial-gradient(circle, #2196f399 10%, transparent 70%);
+	}
+}
+
+.dislike {
+	@media (any-hover: hover) {
+		&:hover {
+			color: #f44336;
+
+			svg {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	&::after {
+		background: radial-gradient(circle, #f4433699 10%, transparent 70%);
+	}
+}
+
+.count {
+	font-weight: 600;
+}
+
+@keyframes pop {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

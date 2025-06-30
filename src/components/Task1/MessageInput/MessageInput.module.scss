@@ -1,0 +1,48 @@
+.wrapper {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+	background: #ffffffdd;
+	border-radius: 30px;
+	padding: 10px 16px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(8px);
+}
+
+.input {
+	flex: 1;
+	border: none;
+	outline: none;
+	font-size: clamp(0.813rem, 0.744rem + 0.34vw, 1rem);
+	font-family: var(--font-ubuntu);
+	background: transparent;
+	color: #333;
+	padding: 10px;
+}
+
+.button {
+	background: linear-gradient(135deg, #84fab0, #8fd3f4);
+	border: none;
+	border-radius: 50%;
+	padding: 10px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease;
+	will-change: transform;
+
+	svg{
+		width: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
+		height: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
+	}
+
+	@media(any-hover: hover) {
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+	
+}

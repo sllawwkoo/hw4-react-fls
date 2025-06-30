@@ -1,0 +1,30 @@
+.wrapper {
+	background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+	padding-block: 40px;
+	border-radius: 12px;
+	padding-inline: 20px;
+	min-height: 85vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: var(--font-shantell);
+}
+
+.container {
+	position: relative;
+	margin: 0 auto;
+	padding: 30px;
+	width: 100%;
+	max-width: 600px;
+	border-radius: 16px;
+	background: rgba(255, 255, 255, 0.25);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(10px);
+}
+
+.messages {
+	max-height: 500px;
+	overflow-y: auto;
+	padding-right: 10px;
+	scroll-behavior: smooth;
+}
