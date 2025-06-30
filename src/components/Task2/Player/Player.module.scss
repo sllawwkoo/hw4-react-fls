@@ -1,26 +1,25 @@
 .player {
-	flex:1 1 45%;
+	flex: 1 1 45%;
 	padding: clamp(1rem, 0.636rem + 1.82vw, 2rem);
 	margin: 10px;
 	border-radius: 16px;
 	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 	position: relative;
 	transition:
-	transform 0.3s ease,
-	background-color 0.3s ease;
+		transform 0.3s ease,
+		background-color 0.3s ease;
 	background: #e0e5ec;
-  box-shadow:
-    8px 8px 16px #babecc,
-    -8px -8px 16px #ffffff;
-
+	box-shadow:
+		8px 8px 16px #babecc,
+		-8px -8px 16px #ffffff;
 }
 
 .active {
 	background: #d0d8e4;
-  box-shadow:
-    inset 6px 6px 10px #babecc,
-    inset -6px -6px 10px #ffffff;
-  border: none;
+	box-shadow:
+		inset 6px 6px 10px #babecc,
+		inset -6px -6px 10px #ffffff;
+	border: none;
 }
 
 .name {
@@ -45,11 +44,11 @@
 	padding: 4px 8px;
 	border-radius: 8px;
 	background-color: #e0e5ec;
-  box-shadow:
-    2px 2px 6px #babecc,
-    -2px -2px 6px #ffffff;
-  color: #2d3436;
-  font-weight: 700;
+	box-shadow:
+		2px 2px 6px #babecc,
+		-2px -2px 6px #ffffff;
+	color: #2d3436;
+	font-weight: 700;
 }
 
 .lose {
@@ -71,17 +70,17 @@
 	border-radius: 8px;
 	font-size: clamp(1rem, 0.964rem + 0.18vw, 1.1rem);
 	background-color: #e0e5ec;
-  border: none;
-  box-shadow:
-    inset 4px 4px 8px #babecc,
-    inset -4px -4px 8px #ffffff;
+	border: none;
+	box-shadow:
+		inset 4px 4px 8px #babecc,
+		inset -4px -4px 8px #ffffff;
 }
 
 .button {
 	background-color: #2ecc71;
-  box-shadow:
-    2px 2px 4px #babecc,
-    -2px -2px 4px #ffffff;
+	box-shadow:
+		2px 2px 4px #babecc,
+		-2px -2px 4px #ffffff;
 	color: white;
 	border: none;
 	padding: 10px 16px;
@@ -98,10 +97,10 @@
 }
 
 .button:hover:not(:disabled) {
-  background-color: #27ae60;
-  box-shadow:
-    inset 2px 2px 4px #babecc,
-    inset -2px -2px 4px #ffffff;
+	background-color: #27ae60;
+	box-shadow:
+		inset 2px 2px 4px #babecc,
+		inset -2px -2px 4px #ffffff;
 }
 
 .message {
@@ -114,14 +113,13 @@
 	animation: fadeIn 0.3s ease-in-out;
 }
 
-
 @keyframes fadeIn {
 	from {
 		opacity: 0;
-		transform: translateX(-50%) translateY(10px);
+		transform: translateY(10px);
 	}
 	to {
 		opacity: 1;
-		transform: translateX(-50%) translateY(0);
+		transform: translateY(0);
 	}
 }
